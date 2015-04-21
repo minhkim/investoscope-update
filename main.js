@@ -3,10 +3,10 @@ import * as netfonds from "./lib/netfonds";
 
 var debug = debugGenerator("investoscope.main");
 
-export async function run() {
+export async function run(options) {
   debug("Fetching quotes.. ");
 
-  var result = await netfonds.get("NAS.OSE");
+  var result = await netfonds.getAll(options.quotes);
 
   debug(result);
 
