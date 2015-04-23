@@ -11,6 +11,7 @@
   "dependencies": {
     "babel": "^5.1.11",
     "csv-parse": "^0.1.1",
+    "csv-stringify": "0.0.6",
     "debug": "^2.1.3",
     "iconv-lite": "^0.4.8",
     "request-promise": "^0.4.2"
