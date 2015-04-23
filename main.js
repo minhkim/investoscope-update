@@ -8,10 +8,9 @@ export async function run(options) {
   debug("Fetching quotes..");
 
   try {
-    var quotes = await investoscope.getQuotes();
-    var endOfDayQuotes = await netfonds.getAll(quotes.slice(0, 1));
-    await investoscope.update(endOfDayQuotes);
-
+    var quotes = await investoscope.getQuotesToUpdate();
+    var historicalQuotes = await netfonds.getHistoricalQuotes(quotes.slice(0, 1));
+    await investoscope.update(historicalQuotes);
   } catch (err) {
     debug(err)
   } finally {
