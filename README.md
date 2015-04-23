@@ -17,7 +17,21 @@ Thanks to the founder of Investoscope Morten Fjord-Larsen who gave me a clue on 
 * Oslo stock exchange - [Netfonds](http://www.netfonds.no/)
 
 ## Usage
-[TODO]
+
+```bash
+# Clone and install dependencies
+git clone git@github.com:thhermansen/investoscope-update.git
+cd investoscope-update
+npm install
+
+# Edit lib/investoscope.js and update which quotes you want to update.
+# Ensure that your quote names also exists in Investoscope. For instance,
+# Netfonds ticker names are "THIN.OSE" while Yahoo uses "THIN.OL". I'll solve
+# this little inconsistency later.
+
+# To update, you do ...
+node index.js
+```
 
 ## TODO
 
