@@ -9,7 +9,7 @@ export async function run(options) {
 
   try {
     var quotes = await investoscope.getQuotesToUpdate();
-    var historicalQuotes = await netfonds.getHistoricalQuotes(quotes.slice(0, 1));
+    var historicalQuotes = await netfonds.getHistoricalQuotes(quotes);
     await investoscope.update(historicalQuotes);
   } catch (err) {
     debug(err)
