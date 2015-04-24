@@ -14,6 +14,6 @@ export async function run(options) {
   } catch (err) {
     debug(err)
   } finally {
-    debug("DONE fetching quotes..");
+    debug("DONE updating quotes..");
   }
 }
