@@ -18,21 +18,30 @@ Thanks to the founder of Investoscope Morten Fjord-Larsen who gave me a clue on 
 
 ## Usage
 
+### Preparation in Investoscope
+
+Symbols a stock is known by on Yahoo and Netfonds differs. You should
+put Netfonds symbol in the ISIN field of a stock in Investoscope.
+
+When we update end of day quotes with this script we'll read quotes from
+Investoscope's database and we try to update all stocks which have data in
+the ISIN field.
+
+### First time install
+
 ```bash
 # Clone and install dependencies
 git clone git@github.com:thhermansen/investoscope-update.git
 cd investoscope-update
 npm install
 
-# Edit lib/investoscope.js and update which quotes you want to update.
-# Ensure that your quote names also exists in Investoscope. For instance,
-# Netfonds ticker names are "THIN.OSE" while Yahoo uses "THIN.OL". I'll solve
-# this little inconsistency later.
-
-# To update, you do ...
-node index.js
+# Copy config file and edit so it points to Investoscope's data folder.
+# The data folder may be changed in Investoscope's preferences,
+# under the advanced tab.
+cp config.json{.example,}
 ```
 
-## TODO
-
-* Read quotes to update from SQLite database, not hard code quote names.
+### To update Investoscope's quotes
+```bash
+node index.js
+```
