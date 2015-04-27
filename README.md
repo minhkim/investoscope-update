@@ -41,6 +41,9 @@ npm install
 cp config.json{.example,}
 ```
 
+#### Debug information
+To get debug information set environment variable `DEBUG=investoscope.*`.
+
 ### To update Investoscope's quotes
 ```bash
 node index.js
