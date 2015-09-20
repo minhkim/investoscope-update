@@ -1,5 +1,5 @@
 require("babel/register")({
-  stage: 0
+  stage: 2
 });
 
 require("./main").run();
