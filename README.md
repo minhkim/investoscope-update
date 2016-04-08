@@ -1,5 +1,7 @@
 # Investoscope update
 
+[![Build Status](https://travis-ci.org/thhermansen/investoscope-update.svg?branch=master)](https://travis-ci.org/thhermansen/investoscope-update)
+
 Updates [Investoscope 3](http://www.investoscope.com/) end of day quotes from
 different data sources than Yahoo or Google.
 
