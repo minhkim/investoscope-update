@@ -1,5 +1,4 @@
-require("babel/register")({
-  stage: 2
-});
+require("babel-register");
+require("babel-polyfill");
 
 require("./main").run();
